@@ -9,41 +9,8 @@ function Navigation() {
 
   return (
     <div className="header-container">
-      <div className="vertical-nav-container">
-        <ul>
-          <span />
-          <li>
-            <a
-              href="https://www.twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <TwitterIcon />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/michael-edes-401724215/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <LinkedInIcon />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://github.com/MichaelEdes/indrix"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <GitHubIcon />
-            </a>
-          </li>
-          <span />
-        </ul>
-      </div>
       <div className="nav-logo">
-        <a href="/">LOGO</a>
+        <a href="/">INDREX</a>
       </div>
       <button
         className={`mobile-nav-toggle ${isOpen && "active"}`}
@@ -84,6 +51,39 @@ function Navigation() {
           </li>
         </ul>
       </nav>
+      <div className="vertical-nav-container">
+        <ul>
+          <span />
+          <li>
+            <a
+              href="https://www.twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <TwitterIcon />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/michael-edes-401724215/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <LinkedInIcon />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/MichaelEdes/indrix"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <GitHubIcon />
+            </a>
+          </li>
+          <span />
+        </ul>
+      </div>
     </div>
   );
 }

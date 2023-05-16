@@ -14,6 +14,8 @@
 
 .nav-logo {
   margin: 2rem;
+  font-size: xx-large;
+  font-weight: 700;
 }
 
 .nav-menu {
@@ -68,14 +70,14 @@
   gap: 1rem;
   align-items: center;
   justify-content: center;
-  padding: 2rem 1.5rem 1rem 1.5rem;
+  padding: 1rem 1.5rem 1rem 1.5rem;
 }
 
 .vertical-nav-container span {
   display: block;
   min-height: 8rem;
-  height: 30vh;
-  width: 0.5px;
+  height: 27vh;
+  width: 1px;
   background-color: black;
 }
 
