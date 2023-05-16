@@ -1,0 +1,58 @@
+.page-hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  background-color: rgba(203, 200, 255, 0.289);
+  overflow: hidden;
+  position: relative;
+}
+
+.page-hero-container h1 {
+  font-weight: 300;
+  margin: auto 25%;
+  font-size: clamp(1.5rem, 6vw, 4rem);
+}
+
+.page-hero-container h1 i {
+  color: rgb(35, 35, 36);
+  font-weight: 100;
+}
+
+#down-arrow {
+  position: absolute;
+  bottom: 10%;
+  border: solid 1px grey;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: clamp(5px, 3vw, 20px) 0;
+}
+
+#down-arrow svg {
+  height: clamp(10px, 5vw, 20px);
+}
+
+#down-arrow:hover span {
+  animation: DownArrowHover 1s infinite;
+}
+
+@keyframes DownArrowHover {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+@media (min-width: 35em) {
+  .page-hero-container {
+    min-height: 95vh;
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,36 @@
+.home-page-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-page-container section {
+  height: 90vh;
+  width: 100%;
+}
+
+.home-page-container section:first-of-type {
+  /* background: linear-gradient(
+    to bottom,
+    rgb(239, 194, 241),
+    rgb(252, 215, 253),
+    rgb(247, 205, 249)
+  ); */
+  background-color: black;
+  margin: unset;
+  padding: unset;
+  position: relative;
+}
+
+.home-page-container section:first-of-type img {
+  margin: unset;
+  padding: unset;
+  position: absolute;
+  height: 100%;
+}
+
+@media (max-width: 35em) {
+  .home-page-container section:first-of-type img {
+    max-height: 50%;
+    bottom: 0;
+  }
+}

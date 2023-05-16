@@ -49,6 +49,29 @@ function Navigation() {
               <span aria-hidden="true">03</span>Store
             </a>
           </li>
+          <li className="social-links">
+            <a
+              href="https://www.twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <TwitterIcon />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/michael-edes-401724215/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <LinkedInIcon />
+            </a>
+            <a
+              href="https://github.com/MichaelEdes/indrix"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <GitHubIcon />
+            </a>
+          </li>
         </ul>
       </nav>
       <div className="vertical-nav-container">
