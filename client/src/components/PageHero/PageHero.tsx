@@ -9,7 +9,7 @@ const Trail: React.FC<{ open: boolean; children: any }> = ({
 }) => {
   const items = React.Children.toArray(children);
   const trail = useTrail(items.length, {
-    config: { mass: 5, tension: 1000, friction: 200 },
+    config: { mass: 5, tension: 1000, friction: 250 },
     opacity: open ? 1 : 0,
     x: open ? 0 : 20,
     height: open ? 80 : 0,
@@ -31,9 +31,9 @@ function PageHero() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setArrowAnimation((prev) => !prev); // Toggle the animation on and off
+      setArrowAnimation((prev) => !prev);
     }, 4000);
-    return () => clearInterval(interval); // Clear the interval when the component is unmounted
+    return () => clearInterval(interval);
   }, []);
 
   return (

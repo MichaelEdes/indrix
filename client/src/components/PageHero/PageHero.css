@@ -4,7 +4,8 @@
   align-items: center;
   justify-content: center;
   min-height: 60vh;
-  background-color: rgba(203, 200, 255, 0.289);
+  background-color: var(--primary);
+  color: var(--text);
   overflow: hidden;
   position: relative;
 }
@@ -13,17 +14,18 @@
   font-weight: 300;
   margin: auto;
   font-size: clamp(1.5rem, 6vw, 4rem);
+  color: var(--secondary);
 }
 
 .page-hero-container h1 i {
-  color: rgb(35, 35, 36);
+  color: var(--tertiary);
   font-weight: 100;
 }
 
 #down-arrow {
   position: absolute;
   bottom: 10%;
-  border: solid 1px grey;
+  border: solid 1px var(--border);
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -33,6 +35,7 @@
 
 #down-arrow svg {
   height: clamp(10px, 5vw, 20px);
+  color: var(--secondary);
 }
 
 #down-arrow:hover span {
