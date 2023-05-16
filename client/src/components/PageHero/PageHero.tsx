@@ -1,20 +1,24 @@
 import React, { useState, useEffect } from "react";
-import "./PageHero.css";
-import SouthIcon from "@mui/icons-material/South";
 import { useTrail, a } from "@react-spring/web";
+import { useMedia } from "react-use";
+import SouthIcon from "@mui/icons-material/South";
+import "./PageHero.css";
 
 const Trail: React.FC<{ open: boolean; children: any }> = ({
   open,
   children,
 }) => {
+  const isMobile = useMedia("(max-width: 35em)");
   const items = React.Children.toArray(children);
+  console.log(open);
   const trail = useTrail(items.length, {
     config: { mass: 5, tension: 1000, friction: 250 },
     opacity: open ? 1 : 0,
     x: open ? 0 : 20,
-    height: open ? 80 : 0,
+    height: open ? (isMobile ? 30 : 60) : 0,
     from: { opacity: 0, x: 20, height: 0 },
   });
+
   return (
     <div>
       {trail.map(({ height, ...style }, index) => (
