@@ -11,7 +11,7 @@
 
 .page-hero-container h1 {
   font-weight: 300;
-  margin: auto 25%;
+  margin: auto;
   font-size: clamp(1.5rem, 6vw, 4rem);
 }
 
@@ -48,6 +48,35 @@
   50% {
     transform: translateY(10px);
   }
+}
+
+.trail-text {
+  position: relative;
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  color: black;
+  font-size: 6em;
+  font-weight: 800;
+  will-change: transform, opacity;
+  overflow: hidden;
+}
+
+.trail-text div {
+  padding-right: 0.05em;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+}
+
+.animate-arrow span {
+  animation: DownArrowHover 1s forwards;
+  animation-iteration-count: 3;
 }
 
 @media (min-width: 35em) {
