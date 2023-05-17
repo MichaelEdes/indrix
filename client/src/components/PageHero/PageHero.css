@@ -56,7 +56,7 @@
 .trail-text {
   position: relative;
   width: 100%;
-  height: clamp(2rem, 8vw, 4rem);
+  height: clamp(3rem, 8vw, 4rem);
   line-height: clamp(2rem, 3rem, 4rem);
   color: black;
   font-size: 6em;
@@ -68,7 +68,7 @@
 @media (max-width: 35em) {
   .trail-text {
     height: clamp(2rem, 7vw, 4rem);
-    line-height: clamp(2rem, 5vw, 4rem);
+    line-height: clamp(1rem, 5vw, 4rem);
   }
 }
 
@@ -91,7 +91,7 @@
 
 @media (min-width: 35em) {
   .page-hero-container {
-    min-height: 95vh;
+    min-height: 93vh;
     overflow: hidden;
   }
 }

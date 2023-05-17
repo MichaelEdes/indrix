@@ -3,11 +3,6 @@
   flex-direction: column;
 }
 
-.home-page-container section {
-  height: 90vh;
-  width: 100%;
-}
-
 .home-page-container section:first-of-type {
   /* background: linear-gradient(
     to bottom,
@@ -21,16 +16,13 @@
   position: relative;
 }
 
-.home-page-container section:first-of-type img {
-  margin: unset;
+.model-carousel-container {
+  height: fit-content;
   padding: unset;
-  position: absolute;
-  height: 100%;
+  background-color: aqua;
 }
 
-@media (max-width: 35em) {
-  .home-page-container section:first-of-type img {
-    max-height: 50%;
-    bottom: 0;
-  }
+.home-page-container p {
+  font-weight: 200;
+  font-size: 0.9rem;
 }

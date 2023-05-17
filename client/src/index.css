@@ -1,9 +1,9 @@
 :root {
-  --primary: #2b30c3;
+  --primary: #000000;
 
-  --secondary: #c3c31e;
+  --secondary: #ef0a0a;
 
-  --tertiary: #e9b50d;
+  --tertiary: #e90d0d;
 
   --quaternary: #1ac29a;
 
@@ -44,4 +44,12 @@ img {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.standard-button {
+  background: none;
+  border: solid 1px var(--border);
+  border-radius: 20px;
+  padding: 0.5rem;
+  margin: 1rem;
 }

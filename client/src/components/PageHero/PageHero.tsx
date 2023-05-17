@@ -10,7 +10,6 @@ const Trail: React.FC<{ open: boolean; children: any }> = ({
 }) => {
   const isMobile = useMedia("(max-width: 35em)");
   const items = React.Children.toArray(children);
-  console.log(open);
   const trail = useTrail(items.length, {
     config: { mass: 5, tension: 1000, friction: 250 },
     opacity: open ? 1 : 0,
