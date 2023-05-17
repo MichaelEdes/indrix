@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 60vh;
+  min-height: 90vh;
   background-color: var(--primary);
   color: var(--text);
   overflow: hidden;
@@ -91,7 +91,7 @@
 
 @media (min-width: 35em) {
   .page-hero-container {
-    min-height: 93vh;
+    min-height: 85vh;
     overflow: hidden;
   }
 }

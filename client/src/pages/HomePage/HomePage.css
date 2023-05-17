@@ -16,12 +16,6 @@
   position: relative;
 }
 
-.model-carousel-container {
-  height: fit-content;
-  padding: unset;
-  background-color: aqua;
-}
-
 .home-page-container p {
   font-weight: 200;
   font-size: 0.9rem;
