@@ -14,7 +14,7 @@
 .model-carousel-container p {
   color: black;
   cursor: pointer;
-  margin: 0;
+  margin: 2vw 0;
 }
 
 .model-carousel-container h5 {
@@ -88,12 +88,15 @@ h4 {
   font-weight: 200;
   text-decoration: none;
   color: var(--dark);
+  margin: 1vw 0;
 }
 
 @media (min-width: 35em) {
   .model-carousel-container {
     height: 100vh;
     overflow-y: none;
+    display: flex;
+    flex-direction: column;
   }
 
   .model-carousel-container h1 {
@@ -104,10 +107,11 @@ h4 {
     display: flex;
     flex-flow: row nowrap;
     overflow-x: scroll;
-    width: 100vw;
+    width: 100%;
     height: auto;
     box-sizing: border-box;
     padding: 0 5rem;
+    margin: auto 0;
   }
 
   .model-carousel::-webkit-scrollbar {
@@ -123,6 +127,7 @@ h4 {
   .image-container {
     max-height: 60vh;
     width: 100%;
+    max-width: 80vw;
     overflow: hidden;
     transition: 1s;
   }

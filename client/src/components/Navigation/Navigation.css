@@ -123,6 +123,10 @@
     transition: 1s;
   }
 
+  .nav-menu a {
+    color: var(--dark);
+  }
+
   .is-active {
     inset: 0 0 0 0;
     left: 30%;
@@ -237,7 +241,7 @@
   @supports (backdrop-filter: blur(1rem)) {
     .nav-menu {
       background: hsl(0, 0%, 100% / 0.1);
-      backdrop-filter: blur(1rem);
+      backdrop-filter: blur(4rem);
     }
   }
 }

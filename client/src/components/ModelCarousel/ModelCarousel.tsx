@@ -91,7 +91,7 @@ function ModelCarousel() {
         >
           Spectrum <i>Noir</i>
         </p>{" "}
-        |{" "}
+        <p>|</p>{" "}
         <p
           className={`${collection === collections[0] && "selected"}`}
           onClick={() => setCollection(collections[0])}
