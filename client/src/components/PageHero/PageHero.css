@@ -58,7 +58,7 @@
   width: 100%;
   height: clamp(3rem, 8vw, 4rem);
   line-height: clamp(2rem, 3rem, 4rem);
-  color: black;
+  color: var(--secondary);
   font-size: 6em;
   font-weight: 800;
   will-change: transform, opacity;

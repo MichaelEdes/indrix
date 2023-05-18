@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: teal;
+  background-color: var(--tertiary);
   color: white;
   position: relative;
 }
@@ -30,6 +30,20 @@
   margin-bottom: auto;
 }
 
+.filled {
+  color: var(--light);
+}
+
+.flowing-text {
+  color: #0000003c;
+}
+
+#quote-name {
+  color: var(--light);
+  font-weight: lighter;
+  margin-top: 8rem;
+}
+
 @media (min-width: 35em) {
   .flowing-text-container {
     padding: 0;
@@ -51,7 +65,7 @@
   }
 
   .flowing-text {
-    padding: 2% 8%;
+    padding: 2% 10%;
     margin-bottom: auto;
   }
 }
