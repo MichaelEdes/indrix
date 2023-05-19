@@ -103,6 +103,16 @@
   display: none;
 }
 
+.nav-container {
+  transform: translateY(0);
+  transition: transform 0.5s ease;
+}
+
+.nav-container.hidden {
+  transform: translateY(-100%);
+  transition: transform 0.5s ease;
+}
+
 @media (max-width: 35em) {
   .vertical-nav-container {
     display: none;

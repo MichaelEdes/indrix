@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Navigation.css";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -6,6 +6,21 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 
 function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const [lastScrollTop, setLastScrollTop] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+      setIsVisible(
+        lastScrollTop - currentScrollTop >= 1 || currentScrollTop === 0
+      );
+      setLastScrollTop(currentScrollTop);
+    };
+    window.addEventListener("scroll", handleScroll, true);
+    return () => window.removeEventListener("scroll", handleScroll, true);
+  }, [lastScrollTop]);
 
   return (
     <div className="header-container">
@@ -27,7 +42,11 @@ function Navigation() {
           aria-expanded="false"
         />
       </button>
-      <nav className={`nav-container ${isOpen && "active"}`}>
+      <nav
+        className={`nav-container ${isOpen && "active"} ${
+          isVisible ? "" : "hidden"
+        }`}
+      >
         <ul className={`nav-menu ${isOpen && "is-active"}`}>
           <li className="menu">
             <a href="/">

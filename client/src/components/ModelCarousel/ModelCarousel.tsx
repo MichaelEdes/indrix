@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./ModelCarousel.css";
 import ModelCard from "../ModelCard/ModelCard";
 import { RobotModel } from "../../types/robotModel";
 import { ModelCollections } from "../../types/modelCollections";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+import { useMedia } from "react-use";
 
 const robotModels: RobotModel[] = [
   {
@@ -81,11 +85,20 @@ const robotModels: RobotModel[] = [
 
 function ModelCarousel() {
   const modelCollection = Object.values(ModelCollections);
-
+  const isMobile = useMedia("(max-width: 62em)");
   const [collection, setCollection] = useState(modelCollection[2]);
 
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: isMobile ? 1 : 2,
+    slidesToScroll: isMobile ? 1 : 2,
+    draggable: true,
+  };
+
   return (
-    <div className="model-carousel-container">
+    <div className="model-carousel-container ">
       <h1>Showcase</h1>
       <h5>
         {Object.values(ModelCollections)
@@ -107,7 +120,7 @@ function ModelCarousel() {
                   )
                 }
               >
-                {modelCollection}
+                <i>{modelCollection}</i>
               </p>
               {index < Object.values(ModelCollections).length / 2 - 1 && (
                 <p> | </p>
@@ -116,22 +129,21 @@ function ModelCarousel() {
           ))}
       </h5>
       <div className="model-carousel">
-        {robotModels
-          .filter((model) => model.collection === collection)
-          .map((model, index) => (
-            <ModelCard
-              key={index}
-              model={{
-                name: model.name,
-                imageUrl: model.imageUrl,
-                collection: model.collection,
-              }}
-            />
-          ))}
+        <Slider {...settings}>
+          {robotModels
+            .filter((model) => model.collection === collection)
+            .map((model, index) => (
+              <ModelCard
+                key={index}
+                model={{
+                  name: model.name,
+                  imageUrl: model.imageUrl,
+                  collection: model.collection,
+                }}
+              />
+            ))}
+        </Slider>
       </div>
-      <h5>
-        <a href="/">View Collection</a>
-      </h5>
     </div>
   );
 }
