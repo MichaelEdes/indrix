@@ -29,7 +29,7 @@ function Navigation() {
       </button>
       <nav className={`nav-container ${isOpen && "active"}`}>
         <ul className={`nav-menu ${isOpen && "is-active"}`}>
-          <li>
+          <li className="menu">
             <a href="/">
               <span aria-hidden="true">00</span>Home
             </a>
