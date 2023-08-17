@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./ModelCarousel.css";
 import ModelCard from "../ModelCard/ModelCard";
 import { RobotModel } from "../../types/robotModel";
@@ -98,7 +98,7 @@ function ModelCarousel() {
   };
 
   return (
-    <div className="model-carousel-container ">
+    <div id="model-carousel" className="model-carousel-container ">
       <h1>Showcase</h1>
       <h5>
         {Object.values(ModelCollections)

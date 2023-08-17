@@ -88,6 +88,7 @@ h4 {
 
 .model-carousel {
   padding-bottom: 1rem;
+  cursor: grab;
 }
 
 @media (min-width: 35em) {
@@ -135,4 +136,24 @@ h4 {
   #model-collection {
     display: none;
   }
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: var(--tertiary); /* Set the color of the chevrons (arrows) to blue */
+}
+
+.slick-prev,
+.slick-next {
+  color: black; /* Set the color of the arrow element to black */
+}
+
+#model-carousel .slick-prev:before,
+#model-carousel .slick-next:before {
+  color: var(--tertiary);
+}
+
+#model-carousel .slick-prev,
+#model-carousel .slick-next {
+  color: black;
 }

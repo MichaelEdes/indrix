@@ -9,6 +9,7 @@
   background-color: var(--tertiary);
   color: white;
   position: relative;
+  transition: color 0.2s;
 }
 
 .flowing-text-container h2 {
@@ -17,31 +18,37 @@
   font-weight: 200;
   margin: 0;
   margin-bottom: auto;
+  transition: color 0.2s;
 }
 
 .flowing-text-container h1 {
   margin: 0;
   font-size: clamp(1.2rem, 4vw, 4rem);
   font-weight: 300;
+  transition: color 0.2s;
 }
 
 .flowing-text {
   padding: 10%;
   margin-bottom: auto;
+  transition: color 0.2s;
 }
 
 .filled {
   color: var(--light);
+  transition: color 0.2s;
 }
 
 .flowing-text {
   color: #0000003c;
+  transition: color 0.2s;
 }
 
 #quote-name {
   color: var(--light);
   font-weight: lighter;
   margin-top: 8rem;
+  transition: color 0.2s;
 }
 
 @media (min-width: 35em) {
